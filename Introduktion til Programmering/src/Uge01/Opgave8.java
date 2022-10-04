@@ -6,15 +6,15 @@ public class Opgave8 {
 
 
 
-		public static void main(String[] args) {
+		/*public static void main(String[] args) {
 	          
 	           printOutput();
 
-		}
+		}*/
 
 		
 
-		public static void printOutput(){
+		public void printOutput(){
 
 			System.out.println("Why is no output shown?");
 
@@ -27,7 +27,7 @@ public class Opgave8 {
 	
 	
 	
-	public class Errors01 {
+	/*public class Errors01 {
 
 		
 
@@ -39,21 +39,21 @@ public class Opgave8 {
 
 		}
 
-	}
+	}*/
 	
 	
 	
-	public class Errors02 {
+	/*public class Errors02 {
 
 	    public static void main(String[] args) {
 
 			printSomething();
 
-		}
+		}*/
 
 
 
-		public static void printSomething() {
+		public void printSomething() {
 
 			System.out.println("Something");		
 
@@ -62,17 +62,17 @@ public class Opgave8 {
 	}
 	
 	
-	public class Errors03 {
+	//public class Errors03 {
 
-	    public static void main(String[] args) {
+	    //public static void main(String[] args) {
 
-			printSomething();
+			//printSomething();
 
-		}
+		//}
 
 
 
-		public static void printSomething() {
+		/*public void printSomething() {
 
 			System.out.println("Something");		
 
@@ -81,4 +81,4 @@ public class Opgave8 {
 	}
 	
 	
-}
+}*/
