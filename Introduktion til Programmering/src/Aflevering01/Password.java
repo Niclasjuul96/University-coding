@@ -16,6 +16,7 @@ public class Password {
 			  + "6. at least one lower case \n");
 		
 		String s = input.nextLine();
+
 		
 		if(checkPWD(s)) {
 			
@@ -24,7 +25,7 @@ public class Password {
 			System.out.println("The Password you have entered is invalid " + s );
 		}
 		
-		
+		input.close();
 	}
 	
 	public static boolean checkPWD(String password) {
@@ -39,15 +40,24 @@ public class Password {
 		for (int i = 0; i < password.length(); i++) {
 			char ch = password.charAt(i);
 			
-			if(is_number(ch)) numcount++;
-			else if(is_letter(ch)) {
+			if(is_number(ch)) {
+				numcount++;
+			}else if(is_letter(ch)) {
 				charcount++;
-				if(is_lowercase(ch)) lowercount++;
+				if(is_lowercase(ch)) {
+					lowercount++;
+				}else{
+					uppercount++;
+				}
+			}else{
+				return false;
 			}
-			else return false;
 		}
 		
-		
+		if(charcount < 2 ) return false;
+		if(numcount < 2) return false;
+		if(lowercount < 1) return false;
+		if(uppercount < 1) return false;
 		
 		return true;
 	}
@@ -60,8 +70,10 @@ public class Password {
 	}
 	
 	public static boolean is_number(char ch) {
-		
-		return(ch >= 0 && ch <= 9);
+
+		int i = Character.getNumericValue(ch);
+
+		return(i >= 0 && i <= 9);
 	}
 	
 	public static boolean is_lowercase(char ch) {
@@ -69,6 +81,7 @@ public class Password {
 	}
 	
 	public static boolean is_uppercase(char ch) {
+		System.out.println("Kom ind i is upper");
 		return (ch >= 'A' && ch <= 'Z');
 	}
 	
