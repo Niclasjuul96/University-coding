@@ -42,9 +42,9 @@ public class AccessControl {
 		System.out.println("*** User "+ userName + " is registered");
 		
 		
+		
 
 
-
-
+		input.close();
 	}
 }
