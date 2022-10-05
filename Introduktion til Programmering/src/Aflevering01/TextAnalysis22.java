@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TextAnalysis22 {
 
     public TextAnalysis22(String fileString, int i) throws FileNotFoundException {
-        
+
         Path Currentpath = Paths.get("");
         String s = Currentpath.toAbsolutePath().toString();
 
@@ -33,7 +33,7 @@ public class TextAnalysis22 {
 
         TextAnalysis22 ta22 = new TextAnalysis22("simpletext01", 40);
 
-        //int i = ta22.frequency(es);
+        int i = ta22.frequency("es");
         
         //System.out.println(i);
     }
@@ -51,7 +51,7 @@ public class TextAnalysis22 {
         return i;
     }
 
-    public int frequency(File file)
+    public int frequency(String string)
     {
 
 
@@ -59,7 +59,7 @@ public class TextAnalysis22 {
         // returns the number of occurrences
         // of " word " in the text (case - sensitive ).
 
-        int i = file.hashCode();
+        int i = string.hashCode();
 
         return i;
     }
