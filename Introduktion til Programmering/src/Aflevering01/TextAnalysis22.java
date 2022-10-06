@@ -8,21 +8,23 @@ import java.util.Scanner;
 
 public class TextAnalysis22 {
 
+
+
     public TextAnalysis22(String fileString, int i) throws FileNotFoundException {
 
         Path Currentpath = Paths.get("");
         String s = Currentpath.toAbsolutePath().toString();
-
+    
         File simpletext01 = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\simpletext01.txt");
         File simpletext02 = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\simpletext02.txt");
         File TimeMachine = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\Timemachine.txt");
-        
-
 
         
+        
+       
         Scanner sc1= new Scanner(simpletext01);
         String data1 = "";
-        ArrayList<String> array1 = new ArrayList<String>();
+        String array1[] = {};
 
         Scanner sc2= new Scanner(simpletext02);
         String data2 = "";
@@ -33,24 +35,20 @@ public class TextAnalysis22 {
         ArrayList<String> array3 = new ArrayList<String>();
 
         while(sc1.hasNextLine()){
-            data1 = sc1.nextLine();
-            
-            array1.add("HEJ");
-            
-
-
-            data1.split(" ");
-            System.out.println(data1);
+            data1 = data1 + "\n"+ sc1.nextLine();       
         }
+        array1 = data1.split("[^a-zA -Z]+");
+
+        System.out.println(array1.length);
 
         while(sc2.hasNextLine()){
             data2 = sc2.nextLine();
-            System.out.println(data2);
+            //System.out.println(data2);
         }
 
         while(sc3.hasNextLine()){
             data3 = sc3.nextLine();
-            System.out.println(data3);
+            //System.out.println(data3);
         }
 
 
@@ -68,6 +66,7 @@ public class TextAnalysis22 {
         TextAnalysis22 ta22 = new TextAnalysis22("simpletext01", 40);
 
         int i = ta22.frequency("es");
+        //int i2 = ta22.wordcount();
         
         //System.out.println(i);
     }
@@ -77,8 +76,7 @@ public class TextAnalysis22 {
     public int wordcount(String str) throws FileNotFoundException
     {
 
-        Scanner sc = new Scanner(str);
-        String data = "";
+       
         // returns the number of words in the file
 
         int i = 0;
@@ -88,7 +86,7 @@ public class TextAnalysis22 {
     public int frequency(String string)
     {
 
-
+        
 
         // returns the number of occurrences
         // of " word " in the text (case - sensitive ).
@@ -100,6 +98,9 @@ public class TextAnalysis22 {
 
     public boolean contains(String word1, String word2)
     {
+        
+
+        
         // returns true if word1 is directly followed by word2 somewhere
         // in the text (see above , not case - sensitive ).
         return true;
