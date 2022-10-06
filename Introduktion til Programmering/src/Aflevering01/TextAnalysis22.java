@@ -22,16 +22,23 @@ public class TextAnalysis22 {
         
         Scanner sc1= new Scanner(simpletext01);
         String data1 = "";
+        ArrayList<String> array1 = new ArrayList<String>();
 
         Scanner sc2= new Scanner(simpletext02);
         String data2 = "";
+        ArrayList<String> array2 = new ArrayList<String>();
 
         Scanner sc3= new Scanner(TimeMachine);
         String data3 = "";
+        ArrayList<String> array3 = new ArrayList<String>();
 
         while(sc1.hasNextLine()){
             data1 = sc1.nextLine();
-            Arrays[] array1 = new ArrayList<>();
+            
+            array1.add("HEJ");
+            
+
+
             data1.split(" ");
             System.out.println(data1);
         }
