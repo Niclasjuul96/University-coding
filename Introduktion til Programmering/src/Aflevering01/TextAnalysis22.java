@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TextAnalysis22 {
@@ -17,15 +19,40 @@ public class TextAnalysis22 {
         
 
 
-        //wordcount(simpletext01);
-        Scanner sc = new Scanner(simpletext01);
-        String data = "";
+        
+        Scanner sc1= new Scanner(simpletext01);
+        String data1 = "";
 
-        while(sc.hasNextLine()){
-            data = sc.nextLine();
-            System.out.println(data);
+        Scanner sc2= new Scanner(simpletext02);
+        String data2 = "";
+
+        Scanner sc3= new Scanner(TimeMachine);
+        String data3 = "";
+
+        while(sc1.hasNextLine()){
+            data1 = sc1.nextLine();
+            Arrays[] array1 = new ArrayList<>();
+            data1.split(" ");
+            System.out.println(data1);
         }
 
+        while(sc2.hasNextLine()){
+            data2 = sc2.nextLine();
+            System.out.println(data2);
+        }
+
+        while(sc3.hasNextLine()){
+            data3 = sc3.nextLine();
+            System.out.println(data3);
+        }
+
+
+
+
+
+        sc1.close();
+        sc2.close();
+        sc3.close();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
