@@ -10,30 +10,15 @@ public class TextAnalysis22 {
 
 
 
-    public TextAnalysis22(String fileString, int i) throws FileNotFoundException {
+    public TextAnalysis22(String souceFileName , int i) throws FileNotFoundException {
 
-        Path Currentpath = Paths.get("");
-        String s = Currentpath.toAbsolutePath().toString();
-    
-        File simpletext01 = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\simpletext01.txt");
-        File simpletext02 = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\simpletext02.txt");
-        File TimeMachine = new File(s + "\\Introduktion til Programmering\\src\\Aflevering01\\Timemachine.txt");
-
-        
-        
+        File text = new File(souceFileName);
        
-        Scanner sc1= new Scanner(simpletext01);
+        Scanner sc1= new Scanner(text);
         String data1 = "";
         String array1[] = {};
 
-        Scanner sc2= new Scanner(simpletext02);
-        String data2 = "";
-        ArrayList<String> array2 = new ArrayList<String>();
-
-        Scanner sc3= new Scanner(TimeMachine);
-        String data3 = "";
-        ArrayList<String> array3 = new ArrayList<String>();
-
+    
         while(sc1.hasNextLine()){
             data1 = data1 + "\n"+ sc1.nextLine();       
         }
@@ -41,29 +26,13 @@ public class TextAnalysis22 {
 
         System.out.println(array1.length);
 
-        while(sc2.hasNextLine()){
-            data2 = sc2.nextLine();
-            //System.out.println(data2);
-        }
-
-        while(sc3.hasNextLine()){
-            data3 = sc3.nextLine();
-            //System.out.println(data3);
-        }
-
-
-
-
-
         sc1.close();
-        sc2.close();
-        sc3.close();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        TextAnalysis22 ta22 = new TextAnalysis22("simpletext01", 40);
+        TextAnalysis22 ta22 = new TextAnalysis22("simpletext01.txt", 40);
 
         int i = ta22.frequency("es");
         //int i2 = ta22.wordcount();
