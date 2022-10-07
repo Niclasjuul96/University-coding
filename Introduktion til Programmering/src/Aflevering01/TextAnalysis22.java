@@ -1,9 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class TextAnalysis22 {
@@ -23,7 +19,6 @@ public class TextAnalysis22 {
             String[] line = sc1.nextLine().split("[^a-zA-Z]+");   
             System.out.println(line.length);
             for(int i = 0; i < line.length; i++){
-
                 if(line[i] != null){
                     this.array1[words + i] = line[i];
                     words += 1;
