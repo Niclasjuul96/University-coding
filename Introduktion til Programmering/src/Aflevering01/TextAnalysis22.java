@@ -17,10 +17,9 @@ public class TextAnalysis22 {
     
         while(sc1.hasNextLine()){  
             String[] line = sc1.nextLine().split("[^a-zA-Z]+");   
-            System.out.println(line.length);
             for(int i = 0; i < line.length; i++){
                 if(line[i] != null){
-                    this.array1[words + i] = line[i];
+                    this.array1[words] = line[i];
                     words += 1;
                 }
             }
@@ -32,7 +31,7 @@ public class TextAnalysis22 {
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        TextAnalysis22 ta22 = new TextAnalysis22("simpletext01.txt", 40);
+        TextAnalysis22 ta22 = new TextAnalysis22("TimeMachine.txt", 50000);
 
         int n = ta22.frequency("es");
         System.out.println(n);
@@ -40,6 +39,8 @@ public class TextAnalysis22 {
         System.out.println(n);
         int i = ta22.wordcount();
         System.out.println(i);
+        boolean answer = ta22.contains("record", "THIS");
+        System.out.println(answer);
     }
 
 
@@ -70,11 +71,23 @@ public class TextAnalysis22 {
 
     public boolean contains(String word1, String word2)
     {
-        
+        String combined = word1.toLowerCase()+word2.toLowerCase();
+
+        for(int i = 0; i < array1.length; i++){
+            if(array1[i] != null && array1[i+1] != null){
+
+                String arrayString = array1[i].toLowerCase() + array1[i+1].toLowerCase();
+
+                if(combined.equals(arrayString)){
+                    return true;
+                }
+            }
+            
+        }
         
         // returns true if word1 is directly followed by word2 somewhere
         // in the text (see above , not case - sensitive ).
-        return true;
+        return false;
     }
 
 
