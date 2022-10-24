@@ -7,11 +7,15 @@ public class Exercise1 {
 
         int tal1;
         int tal2;
+        String array[];
 
         String svar = input.nextLine();
+        array = new String[5];
+
+        array = svar.split(" ");
         
-        tal1 = Character.getNumericValue(svar.charAt(0));
-        tal2 = Character.getNumericValue(svar.charAt(2));
+        tal1 = Integer.parseInt(array[0]);
+        tal2 = Integer.parseInt(array[1]);
 
         input.close();
         
