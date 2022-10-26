@@ -2,7 +2,7 @@ package Uge03;
 
 import java.awt.Point;
 
-public class swapPoints {
+public class swapPoint {
     public static void main(String[] args) {
         Point p1 = new Point(5,2);
         Point p2 = new Point(-3,6);

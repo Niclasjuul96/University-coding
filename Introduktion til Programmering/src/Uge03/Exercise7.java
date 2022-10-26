@@ -1,7 +1,6 @@
 package Uge03;
 
 import java.util.Scanner;
-import java.util.jar.Attributes.Name;
 
 public class Exercise7{
     public static void main(String[] args) {
@@ -17,6 +16,7 @@ public class Exercise7{
                 name = array[i] + "," + name;
             }
         }
+        sc1.close();
 
         System.out.println("Your name in reverse order is: " + name);
     }
