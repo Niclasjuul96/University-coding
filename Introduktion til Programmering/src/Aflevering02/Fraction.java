@@ -1,4 +1,3 @@
-import Uge03.Factorial;
 
 public class Fraction{
     int a;
