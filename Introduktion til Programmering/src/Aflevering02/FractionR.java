@@ -29,7 +29,7 @@ public class FractionR {
         this.b = b;
     }
 
-    //our tostring method that gets called when you try to print the object. even tho i created a function checkString.  
+    //our tostring method that gets called when you try to print the object.  
     public String toString(){
         String s;
 
@@ -61,16 +61,19 @@ public class FractionR {
         int af = 0;
         int bf = 0;
         
-
+        //this part takes the object and makes it to a string, that i can manipulate.
         String s = f.toString();
+        //if the string starts with "-" then i cut the 2 first charactors, and the last, so that only numbers are back.
         if(s.startsWith("-")){
             s = s.substring(2, s.length()-1);
         }else{
             s = s.substring(1, s.length()-1);
         }
         
+        //when we have cut our string from the parenthesis. the we are using the slash to split the fractions and get the 2 numbers.
         String array[] = s.split("/");
 
+        //put the 2 values from our array and put into 2 int values.
         af = Integer.parseInt(array[0]);
         bf = Integer.parseInt(array[1]);
 
