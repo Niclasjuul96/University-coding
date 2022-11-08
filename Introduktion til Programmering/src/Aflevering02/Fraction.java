@@ -11,11 +11,8 @@ public class Fraction{
         b = denominator;
     }
 
-
-    //this method checks a and b values. and makes sure they isn't negative, and if so, then edits the results accordingly.
-    public String checkString(int a, int b){
-
-
+    //our tostring method that gets called when you try to print the object. even tho i created a function checkString.  
+    public String toString(){
         String s;
 
         if(a < 0){
@@ -37,12 +34,6 @@ public class Fraction{
             }
             
         }
-        return s;
-    }
-
-    //our tostring method that gets called when you try to print the object. even tho i created a function checkString.  
-    public String toString(){
-        String s = checkString(a, b);
         return s;
     }
 
