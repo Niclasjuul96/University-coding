@@ -16,6 +16,13 @@ public class ClassDemo{
 		System.out.println(f1.divideBy(f2));
 		FractionR fr = ((f4.divideBy(f3)).plus(f1)).minus(f2);
 		System.out.println(fr);
+
+
+
+
+		
+
+
     }
 
 }
