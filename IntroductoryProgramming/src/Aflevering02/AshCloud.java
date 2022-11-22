@@ -1,6 +1,3 @@
-
-import java.text.DecimalFormat;
-
 //I define my class
 public class AshCloud {
 	int n;

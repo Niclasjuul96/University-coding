@@ -1,0 +1,81 @@
+/**
+ * The Hack CPU (Central Processing unit), consisting of an ALU,
+ * two registers named A and D, and a program counter named PC.
+ * The CPU is designed to fetch and execute instructions written in
+ * the Hack machine language. In particular, functions as follows:
+ * Executes the inputted instruction according to the Hack machine
+ * language specification. The D and A in the language specification
+ * refer to CPU-resident registers, while M refers to the external
+ * memory location addressed by A, i.e. to Memory[A]. The inM input
+ * holds the value of this location. If the current instruction needs
+ * to write a value to M, the value is placed in outM, the address
+ * of the target location is placed in the addressM output, and the
+ * writeM control bit is asserted. (When writeM==0, any value may
+ * appear in outM). The outM and writeM outputs are combinational:
+ * they are affected instantaneously by the execution of the current
+ * instruction. The addressM and pc outputs are clocked: although they
+ * are affected by the execution of the current instruction, they commit
+ * to their new values only in the next time step. If reset==1 then the
+ * CPU jumps to address 0 (i.e. pc is set to 0 in next time step) rather
+ * than to the address resulting from executing the current instruction.
+ */
+ 
+CHIP CPU {
+	IN
+		inM[16],         // M value input  (M = contents of RAM[A])
+		instruction[16], // Instruction for execution
+		reset;           // Signals whether to re-start the current
+		                 // program (reset==1) or continue executing
+		                 // the current program (reset==0).
+
+	OUT
+		outM[16],        // M value output
+		writeM,          // Write to M?
+		addressM[15],    // Address in data memory (of M)
+		pc[15];          // address of next instruction
+
+	PARTS:
+	// Put your code here:
+	Not(in=instruction[15], out=aIns);	//check if its an a instruction
+	Not(in=aIns, out=cIns); //if its not an a instruction then a c instruction
+	
+	And(a=cIns, b=instruction[5], out=ToRegA); //since the d-bits control which register should accept, we check the last of the d-bits, to see if it has to go to A-register.
+	
+	Mux16(a=instruction, b=fromALU, sel=ToRegA, out=StoreRegA); //takes the instruction and whats come from ALU if, since ToRegA decided whether the A og D-register should accept.
+	Or(a=aIns, b=ToRegA, out=ALoad); //Whether a or b, to be loaded to a.
+	
+	ARegister(in=StoreRegA, load=ALoad, out=outA); //we take what we got from MUX and place it in Areg.
+	
+	Mux16(a=outA, b=inM, sel=instruction[12], out=AorMout); //decide wether it chooses outA or inM, based on the singular a-bit.
+	And(a=cIns, b=instruction[4], out=ToRegD);//checks wether data should be stored in D-register, based on 2. d-bit.
+	DRegister(in=fromALU, load=ToRegD, out=outD); //loads data in to the DReg.
+	
+	ALU(x=outD, y=AorMout, zx=instruction[11], nx=instruction[10], zy=instruction[9], ny=instruction[8], f=instruction[7], no=instruction[6], out=fromALU, zr=zrOut, ng=ngOut); //we use the 6 c-bits to determine the ALU functions.
+	Or16(a=false, b=outA, out[0..14]=addressM);
+	
+	Or16(a=false, b=fromALU, out=outM);
+	
+	And(a=cIns, b=instruction[3], out=writeM); //decides wether to write to M, based on first c-instruction.
+	
+	//PC Parts
+	And(a=zrOut, b=instruction[1], out=jeq);//jump if 0.
+	And(a=ngOut, b=instruction[2], out=jlt);//jump if less than 0.
+	
+	Or(a=zrOut, b=ngOut, out=ZeroOrNeg);//check if it less than 0 or eq 0.
+	
+	Not(in=ZeroOrNeg, out=pos);//this checks if its a positive number.
+	And(a=pos, b=instruction[0], out=jgt); //jump if greather than
+	Or(a=jeq, b=jlt, out=jle); //if eq 0 or less than 0
+	Or(a=jgt, b=jle, out=JumpA); //jumpsA in certain way
+	
+	And(a=cIns,b=JumpA, out=PCload); //id its a c-instruction and it meets the JumpA conditions.
+	Not(in=PCload, out=incPC); //increments only if pc isnt loaded.
+	PC(in=outA, load=PCload, inc=incPC, reset=reset, out[0..14]=pc);
+	
+	
+	
+	
+
+	
+	
+}
