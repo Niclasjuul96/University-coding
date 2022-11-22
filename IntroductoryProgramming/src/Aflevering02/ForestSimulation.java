@@ -103,7 +103,6 @@ public class ForestSimulation {
 	        // create an array of type Tree
 	        trees = new Tree[noOftrees];
 	        // fill the array
-	        int index = 0;
 	        for (int i = 0; i < trees.length/3; i++) {
 	            trees[i] = new Beech(ConstAndUtil.getLegalRandomPosition(),1.0);
 	        }
