@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "vscjava.vscode-java-debug",
         "vscjava.vscode-java-pack"
     ]
 }
