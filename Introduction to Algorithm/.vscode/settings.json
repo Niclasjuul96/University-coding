@@ -3,5 +3,12 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
+    ],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-19",
+            "path": "/Users/niclasjuulschaeffer/jdk-19+fx-19",
+            "default": true
+        }
     ]
 }
