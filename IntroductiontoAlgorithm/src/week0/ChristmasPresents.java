@@ -8,6 +8,7 @@ public class ChristmasPresents {
         int Laura = scanner.nextInt();
         int Oscar = scanner.nextInt();
         scanner.close();
+        
 
         int message = 0;
 
