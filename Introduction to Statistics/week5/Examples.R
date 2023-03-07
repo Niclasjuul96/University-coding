@@ -16,7 +16,7 @@ qnorm(0.975)
 # The t-quantiles for n-values: 10, 20, ... ,50
 # (rounded to 3 decimal points)
 qt(0.975, df = seq(9, 49, by = 10))
-# The t-quantiles for n-values: 100, 200, ... ,500 
+# The t-quantiles for n-values: 100, 200, ... ,500
 # (rounded to 3 decimal points)
 qt(0.975, df = seq(99, 499, by = 100))
 
@@ -55,8 +55,8 @@ set.seed(1234)
 ################################################################
 # Example: Central Limit Theorem in practice
 #
-par(mfrow=c(2,2))
-xlim <- c(0,1)
+par(mfrow = c(2, 2))
+xlim <- c(0, 1)
 # Number of simulated samples
 k <- 1000
 
@@ -64,22 +64,22 @@ k <- 1000
 n <- 1
 # Simulate k samples with n observations
 # Note, the use of replicate: it repeats the second argument (here k times)
-Xbar <- replicate(k, runif(n))
-hist(Xbar, col="blue", main="n=1", xlab="Sample means", xlim=xlim)
+Xbar <- replicate(k, runif(n)) # nolint # nolint
+hist(Xbar, col = "blue", main = "n=1", xlab = "Sample means", xlim = xlim)
 # Increase the number of observations in each sample
-# Note, the use of apply here: it takes the mean on the 2nd dimension 
+# Note, the use of apply here: it takes the mean on the 2nd dimension  # nolint
 # (i.e. column) of the matrix returned by replicate
 n <- 2
-Xbar <- apply(replicate(k, runif(n)), 2, mean)
-hist(Xbar, col="blue", main="n=2", xlab="Sample means", xlim=xlim)
+Xbar <- apply(replicate(k, runif(n)), 2, mean) # nolint
+hist(Xbar, col = "blue", main = "n=2", xlab = "Sample means", xlim = xlim)
 # Increase the number of observations in each sample
 n <- 6
-Xbar <- apply(replicate(k, runif(n)), 2, mean)
-hist(Xbar, col="blue", main="n=6", xlab="Sample means", xlim=xlim)
+Xbar <- apply(replicate(k, runif(n)), 2, mean) # nolint
+hist(Xbar, col="blue", main="n=6", xlab="Sample means", xlim=xlim) # nolint # nolint
 # Increase the number of observations in each sample
 n <- 30
-Xbar <- apply(replicate(k, runif(n)), 2, mean)
-hist(Xbar, col="blue", main="n=30", xlab="Sample means", xlim=xlim)
+Xbar <- apply(replicate(k, runif(n)), 2, mean) # nolint
+hist(Xbar, col="blue", main="n=30", xlab="Sample means", xlim=xlim) # nolint # nolint
 
 
 # We set a seed to be able get the same results
@@ -92,9 +92,9 @@ set.seed(12345.6789)
 # Simulate 1000 samples of n=50 observations, and
 # calculate a CI from each sample
 k <- 1000
-ThousandCIs <- replicate(k, t.test(rnorm(n=50, mean=1, sd=1))$conf.int)
+ThousandCIs <- replicate(k, t.test(rnorm(n=50, mean=1, sd=1))$conf.int) # nolint
 # Count how often 1 is covered
-sum(ThousandCIs[1,] < 1 & 1 < ThousandCIs[2,])
+sum(ThousandCIs[1,] < 1 & 1 < ThousandCIs[2,]) # nolint # nolint
 
 
 
@@ -104,15 +104,15 @@ sum(ThousandCIs[1,] < 1 & 1 < ThousandCIs[2,])
 #
 # The chisquare-distribution with df=9 (the density)
 x <- seq(0, 35, by = 0.1)
-plot(x, dchisq(x, df = 9), type = "l", ylab="Density")
+plot(x, dchisq(x, df = 9), type = "l", ylab="Density") # nolint
 
 
 
 
 # Reading the data into R:
-xA <- c(.7,-1.6,-.2,-1.2,-1,3.4,3.7,.8,0,2)
-xB <- c(1.9,.8,1.1,.1,-.1,4.4,5.5,1.6,4.6,3.4)
-dif <- xB-xA
+xA <- c(.7,-1.6,-.2,-1.2,-1,3.4,3.7,.8,0,2) # nolint # nolint
+xB <- c(1.9,.8,1.1,.1,-.1,4.4,5.5,1.6,4.6,3.4) # nolint # nolint
+dif <- xB-xA # nolint
 dif
 t.test(dif)
 
@@ -123,13 +123,13 @@ t.test(dif)
 # Example: Sleeping medicine
 #
 # Enter sleep difference observations
-x <- c(1.2, 2.4, 1.3, 1.3, 0.9, 1.0, 1.8, 0.8, 4.6, 1.4) 
+x <- c(1.2, 2.4, 1.3, 1.3, 0.9, 1.0, 1.8, 0.8, 4.6, 1.4)  # nolint # nolint
 n <- length(x)
 # Compute the tobs - the observed test statistic
 tobs <- (mean(x) - 0) / (sd(x) / sqrt(n))
 tobs
 # Compute the p-value as a tail-probability in the t-distribution
-pvalue <- 2 * (1-pt(abs(tobs), df=n-1))
+pvalue <- 2 * (1-pt(abs(tobs), df=n-1)) # nolint # nolint
 pvalue
 
 
@@ -145,25 +145,25 @@ t.test(x)
 # Example: Student heights
 #
 # The height sample
-x <- c(168,161,167,179,184,166,198,187,191,179)
+x <- c(168,161,167,179,184,166,198,187,191,179) # nolint # nolint
 
 # Using histograms
-par(mfrow=c(1,3), mar=c(4,3,1,1))
-hist(x, xlab="Height", main="")
-hist(x, xlab="Height", main="", breaks=8)
-hist(x, xlab="Height", main="", breaks=2)
+par(mfrow=c(1,3), mar=c(4,3,1,1)) # nolint
+hist(x, xlab="Height", main="") # nolint
+hist(x, xlab="Height", main="", breaks=8) # nolint # nolint
+hist(x, xlab="Height", main="", breaks=2) # nolint
 
 
 
 # Plot the empirical cdf
 plot(ecdf(x), verticals = TRUE)
 # Plot the best normal cdf
-xseq <- seq(0.9*min(x), 1.1*max(x), length.out = 100) 
-lines(xseq, pnorm(xseq, mean(x), sd(x))) 
+xseq <- seq(0.9*min(x), 1.1*max(x), length.out = 100)  # nolint # nolint
+lines(xseq, pnorm(xseq, mean(x), sd(x)))  # nolint
 
 
 
-# The expected quantiles in a 0 to 1 uniform distribution 
+# The expected quantiles in a 0 to 1 uniform distribution  # nolint
 n <- length(x)
 # They have equal distance
 pseq <- (1:n-0.5)/n
