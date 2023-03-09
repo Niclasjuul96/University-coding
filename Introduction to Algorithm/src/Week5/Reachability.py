@@ -1,9 +1,6 @@
 N, M, a, b = map(int, input().split())
-
 N+=1
-
 adj = [[] for _ in range(N)]
-
 for _ in range(M):
     x,y = map(int, input().split())
     adj[x].append(y)
@@ -12,15 +9,12 @@ for _ in range(M):
 from collections import deque
 def bfs(adj, s, t):
     q = deque()
-
     visited = [False for _ in range(N)]
-
     visited[s] = True
     q.append(s)
 
     while(q):
         current = q.popleft()
-
         for neighbor in adj[current]:
             if(visited[neighbor]):
                 continue
