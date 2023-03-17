@@ -185,7 +185,15 @@ qqline(D$IWN)
 qqnorm(D$SPY)
 qqline(D$SPY)
 
+mean(D$AGG)
+mean(D$VAW)
+mean(D$IWN)
+mean(D$SPY)
 
+sd(D$AGG)
+sd(D$VAW)
+sd(D$IWN)
+sd(D$SPY)
 ###########################################################################
 ## Konfidensinterval for middelværdi
 
@@ -215,6 +223,15 @@ t.test(D$VAW, D$AGG)
 
 ###########################################################################
 ## Beregning af korrelation
+
+
+plot(D$VAW, D$IWN)
+abline(lm(D$VAW~D$IWN), col="red")
+
+
+cov(D$VAW, D$IWN)
+cor(D$VAW, D$IWN)
+
 
 ## Beregning af korrelation mellem udvalgte ETF'er
 cor(D[ ,c("AGG","VAW","IWN","SPY")], use="pairwise.complete.obs")
@@ -273,3 +290,4 @@ apply(D[, num], 2, function(x){
 ## R-pakken "knitr" kan anvendes meget elegant til at lave et .tex 
 ## dokument der inkluderer R koden direkte i dokumentet. Dette 
 ## dokument og bogen er lavet med knitr.
+
