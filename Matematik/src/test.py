@@ -11,4 +11,4 @@ Z = f(X,Y)
 
 fig, ax = plt.subplots()
 ax.contour(X,Y,Z,levels=[8,16,24,32,40,48,56],colors='black')
-ax.add_patch(plt.Circle((1,0),
+ax.add_patch(plt.Circle((1,0)))
