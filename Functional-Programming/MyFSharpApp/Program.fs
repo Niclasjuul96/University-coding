@@ -1,6 +1,3 @@
-﻿// Define a new function to print a name.
-let printGreeting name =
-    printfn $"Hello {name} from F#!"
-
-// Call your new function!
-printGreeting "Ana"
+﻿let rec fact n =
+if n=0 then 1
+else n * fact(n-1);;
