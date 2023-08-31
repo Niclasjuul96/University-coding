@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BjQGTyjI7ljypJ0dCh8hwWLuVPXvXCPdR4RHSnWIJUnMSvjSQkOicoh/Fots798GgbS91k1Amr5+7mm2F018Eg==",
+  "success": true,
+  "projectFilePath": "/Users/niclasjuulschaeffer/University-coding/Functional-Programming/MyFSharpApp/MyFSharpApp.fsproj",
+  "expectedPackageFiles": [
+    "/Users/niclasjuulschaeffer/.nuget/packages/fsharp.core/7.0.0/fsharp.core.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
