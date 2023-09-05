@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./02450Toolbox_Python/Tools"
+    ]
+}
