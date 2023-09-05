@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import model_selection
 
 # requires data from exercise 1.5.1
-from ex1_5_1 import *
+from Scripts.ex1_5_1 import *
 
 # This script crates predictions from three KNN classifiers using cross-validation
 
