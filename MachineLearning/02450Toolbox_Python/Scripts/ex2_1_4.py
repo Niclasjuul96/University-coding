@@ -8,6 +8,7 @@ from scipy.linalg import svd
 # Subtract mean value from data
 Y = X - np.ones((N,1))*X.mean(0)
 
+
 # PCA by computing SVD of Y
 U,S,Vh = svd(Y,full_matrices=False)
 # scipy.linalg.svd returns "Vh", which is the Hermitian (transpose)

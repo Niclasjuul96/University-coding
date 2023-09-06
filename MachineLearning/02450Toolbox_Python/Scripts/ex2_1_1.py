@@ -3,7 +3,8 @@ import numpy as np
 import xlrd
 
 # Load xls sheet with data
-doc = xlrd.open_workbook('../Data/nanonose.xls').sheet_by_index(0)
+
+doc = xlrd.open_workbook('/Users/niclasjuulschaeffer/University-coding/MachineLearning/02450Toolbox_Python/Data/nanonose.xls').sheet_by_index(0)
 
 # Extract attribute names (1st row, column 4 to 12)
 attributeNames = doc.row_values(0, 3, 11)
@@ -23,8 +24,12 @@ for i, col_id in enumerate(range(3, 11)):
     X[:, i] = np.asarray(doc.col_values(col_id, 2, 92))
 
 # Compute values of N, M and C.
-N = len(y)
-M = len(attributeNames)
-C = len(classNames)
+N = len(y) #objects
+M = len(attributeNames) #Atributes A-H
+C = len(classNames) # Different sample types
 
+print(N)
+print(M)
+print(C)
+print('Outputs 90 objects and 8 atributes of each object, that means we have a 90x8 matrix')
 print('Ran Exercise 2.1.1')

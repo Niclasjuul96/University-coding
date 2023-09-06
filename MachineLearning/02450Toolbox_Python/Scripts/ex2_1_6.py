@@ -1,5 +1,5 @@
 ## exercise 2.1.6
-from Scripts.ex2_1_1 import * 
+from ex2_1_1 import * 
 import matplotlib.pyplot as plt
 from scipy.linalg import svd
 

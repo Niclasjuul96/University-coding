@@ -7,7 +7,7 @@ from ex2_1_1 import *
 from matplotlib.pyplot import figure, plot, title, legend, xlabel, ylabel, show
 
 # Data attributes to be plotted
-i = 0
+i = 0 # this is nr of atributes A-H that we wanna look into
 j = 1
 
 ##
