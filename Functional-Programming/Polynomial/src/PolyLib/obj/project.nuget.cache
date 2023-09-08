@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fIgKlijySpmQPDMxbVnP2xMgUURyZDDIQM8a3gnrFdS/h4V8Be751afsBO28BL8MLbdu5wKeZ9LMt20sVg24Bw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mire\\Documents\\MRH data\\Kurser\\02157-23\\MiniProjectsPrograms\\Polynomial\\Handout\\Polynomial\\src\\PolyLib\\PolyLib.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mire\\.nuget\\packages\\fsharp.core\\7.0.200\\fsharp.core.7.0.200.nupkg.sha512"
+  ],
+  "logs": []
+}
