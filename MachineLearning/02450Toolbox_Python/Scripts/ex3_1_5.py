@@ -32,4 +32,5 @@ sim = similarity(X, q, 'cos');
 print('Query vector:\n {0}\n'.format(q))
 print('Similarity results:\n {0}'.format(sim))
 
+
 print('Ran Exercise 3.1.5')
