@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.exercises.AppTest" time="0.016" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises\target\test-classes;C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises\target\classes;C:\Users\nicla\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicla\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\nicla\.m2\repository\io\github\pspaces\jspace\common\1.0-SNAPSHOT\common-1.0-SNAPSHOT.jar;C:\Users\nicla\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\nicla\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\nicla\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;"/>
+    <property name="java.vm.vendor" value="Temurin"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="DK"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\nicla\AppData\Local\Temp\surefire8124903133652395971\surefirebooter5127437354808932695.jar C:\Users\nicla\AppData\Local\Temp\surefire8124903133652395971 2024-01-03T09-20-48_580-jvmRun1 surefire355174986622142548tmp surefire_03236427185316216095tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises\target\test-classes;C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises\target\classes;C:\Users\nicla\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicla\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\nicla\.m2\repository\io\github\pspaces\jspace\common\1.0-SNAPSHOT\common-1.0-SNAPSHOT.jar;C:\Users\nicla\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar;C:\Users\nicla\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\nicla\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\nicla"/>
+    <property name="user.language" value="da"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre"/>
+    <property name="basedir" value="C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\nicla\AppData\Local\Temp\surefire8124903133652395971\surefirebooter5127437354808932695.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\resources.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\rt.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\jsse.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\jce.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\charsets.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\jfr.jar;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="java.runtime.version" value="1.8.0_382-b05"/>
+    <property name="user.name" value="nicla"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK Client VM"/>
+    <property name="localRepository" value="C:\Users\nicla\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\nicla\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_382"/>
+    <property name="user.dir" value="C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\exercises"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\nicla\Documents\Coding\Introduction to Coordination in Distributed Applications\apache-maven-3.9.6\bin;C:\Users\nicla\AppData\Local\Microsoft\WindowsApps;;C:\Users\nicla\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nicla\AppData\Local\Programs\Hyper\resources\bin;C:\Users\nicla\AppData\Roaming\npm;C:\Users\nicla\AppData\Local\Coursier\data\bin;C:\Users\nicla\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Temurin"/>
+    <property name="java.vm.version" value="25.382-b05"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.382.5-hotspot\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="com.exercises.AppTest" time="0"/>
+</testsuite>
